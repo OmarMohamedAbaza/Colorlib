@@ -1,0 +1,236 @@
+<html>
+
+<head>
+    <title>CLOCK</title>
+</head>
+
+<style>
+    :root {
+        --black: black;
+
+    }
+
+    body {
+        background-color: white;
+        font-size: 3em;
+        text-align: center;
+    }
+
+    .box {
+        position: relative;
+        width: 700px;
+        height: 600px;
+        margin: 5% auto auto auto;
+    }
+
+    .frame {
+        position: absolute;
+        width: 70%;
+        height: 70%;
+        background: #ffe6d5;
+        border-radius: 50%;
+        left: 15%;
+        top: 20%;
+    }
+
+    .frame-inner {
+        position: absolute;
+        width: 90%;
+        height: 90%;
+        background: #fff5ee;
+        border-radius: 50%;
+        left: 5%;
+        top: 5%;
+    }
+
+    .twelve {
+        position: absolute;
+        width: 20%;
+        height: 20%;
+        top: 0;
+        left: 40%;
+    }
+
+    .six {
+        position: absolute;
+        width: 20%;
+        height: 20%;
+        bottom: -5%;
+        left: 40%;
+    }
+
+    .nine {
+        position: absolute;
+        width: 20%;
+        height: 20%;
+        bottom: 40%;
+        left: -5%;
+    }
+
+    .three {
+        position: absolute;
+        width: 20%;
+        height: 20%;
+        bottom: 40%;
+        right: -5%;
+    }
+
+    .one {
+        position: absolute;
+        width: 20%;
+        height: 20%;
+        top: 3%;
+        right: 20%;
+    }
+
+    .two {
+        position: absolute;
+        width: 20%;
+        height: 20%;
+        top: 17%;
+        right: 5%;
+    }
+
+    .four {
+        position: absolute;
+        width: 20%;
+        height: 20%;
+        bottom: 17%;
+        right: 5%;
+    }
+
+    .five {
+        position: absolute;
+        width: 20%;
+        height: 20%;
+        bottom: 2%;
+        right: 20%;
+    }
+
+    .seven {
+        position: absolute;
+        width: 20%;
+        height: 20%;
+        bottom: 2%;
+        left: 20%;
+    }
+
+    .eight {
+        position: absolute;
+        width: 20%;
+        height: 20%;
+        bottom: 17%;
+        left: 5%;
+    }
+
+    .ten {
+        position: absolute;
+        width: 20%;
+        height: 20%;
+        top: 17%;
+        left: 5%;
+    }
+
+    .eleven {
+        position: absolute;
+        width: 20%;
+        height: 20%;
+        top: 3%;
+        left: 20%;
+    }
+
+    .center {
+        width: 10%;
+        height: 10%;
+        background: black;
+        border-radius: 50%;
+        position: absolute;
+        left: 45%;
+        top: 45%;
+    }
+
+    .minute {
+        position: absolute;
+        width: 1%;
+        height: 40%;
+        background: black;
+        border: 1px solid black;
+        left: 49.5%;
+        top: 10%;
+        transform-origin: 50% 100%;
+        animation: rotate 3600s infinite steps(60);
+
+    }
+
+    .hour {
+        position: absolute;
+        width: 2%;
+        height: 30%;
+        background: black;
+        border: 1px solid black;
+        left: 49.5%;
+        top: 20%;
+        transform-origin: 50% 100%;
+        animation: rotate 43200s infinite linear;
+
+    }
+
+    .seconds {
+        width: .5%;
+        height: 40%;
+        background: red;
+        position: absolute;
+        left: 49.75%;
+        top: 10%;
+        transform-origin: 50% 100%;
+        animation: rotate 60s infinite steps(60);
+
+    }
+
+    @keyframes rotate {
+        100% {
+            transform: rotateZ(360deg);
+        }
+    }
+
+    @media all and (max-width:600px) {
+        .box {
+            margin-top: 100px;
+            height: 300px;
+            width: 300px;
+        }
+
+        body {
+            font-size: 1.5em;
+        }
+    }
+</style>
+
+<body>
+
+    <div class="box">
+        <div class="frame">
+            <div class="frame-inner">
+                <div class="one">1</div>
+                <div class="two">2</div>
+                <div class="three">3</div>
+                <div class="four">4</div>
+                <div class="five">5</div>
+                <div class="six">6</div>
+                <div class="seven">7</div>
+                <div class="eight">8</div>
+                <div class="nine">9</div>
+                <div class="ten">10</div>
+                <div class="eleven">11</div>
+                <div class="twelve">12</div>
+                <div class="minute"></div>
+                <div class="hour"></div>
+                <div class="seconds"></div>
+                <div class="center"></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
